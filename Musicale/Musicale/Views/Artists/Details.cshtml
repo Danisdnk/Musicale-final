@@ -45,8 +45,6 @@
             @foreach (var item in Model.Albums)
             {
               
-               
-
                 <div class="list-group-item list-group-item-action ">
 
                     <div class="media d-flex align-items-end">
@@ -106,15 +104,15 @@
 
                                 <p> @Html.HiddenFor(modelItem => item.Gender.genero)</p>
 
-                                <div class="btn-dark">
-
-                                    @Html.ActionLink((string)"Details", "Details", "Albums", new { id = item.ID }, null)
-                                    @Html.ActionLink((string)"Edit", "Edits", "Albums", new { id = item.ID }, null)
 
 
-                                </div>
-
+                                <a href="@Url.Action((string)"Details", "Albums", new { id = item.ID }, null)" class="btn bg-light">
+                                    <i class="fas fa-edit"> Detalles</i>
+                                </a>
+                               
                             </div>
+
+                            
                         </div>
 
 
